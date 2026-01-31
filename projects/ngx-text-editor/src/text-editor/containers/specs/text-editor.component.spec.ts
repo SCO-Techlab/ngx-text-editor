@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TextEditorComponent } from '../text-editor.component';
 
-describe('projects -> ngx-text-editor -> src -> components -> text-editor -> TextEditorComponent', () => {
+describe('projects -> ngx-text-editor -> src -> text-editor -> containers -> TextEditorComponent', () => {
   let component: TextEditorComponent;
   let fixture: ComponentFixture<TextEditorComponent>;
 

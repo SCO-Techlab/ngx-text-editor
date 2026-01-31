@@ -1,1 +1,1 @@
-export * from './text-editor.component';
+export * from './containers';
