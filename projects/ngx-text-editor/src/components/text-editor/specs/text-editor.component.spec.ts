@@ -1,20 +1,16 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TextEditorComponent } from '../text-editor.component';
 
-describe('TextEditorComponent', () => {
+describe('projects -> ngx-text-editor -> src -> components -> text-editor -> TextEditorComponent', () => {
   let component: TextEditorComponent;
   let fixture: ComponentFixture<TextEditorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextEditorComponent ]
+      declarations: [TextEditorComponent]
     })
-    .compileComponents();
-  }));
+      .compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TextEditorComponent);
