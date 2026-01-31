@@ -33,13 +33,8 @@
                             },
                             {
                                 "glob": "**/*",
-                                "input": "dist/ngx-text-editor/resources/images",
-                                "output": "resources/images/"
-                            },
-                            {
-                                "glob": "**/*",
-                                "input": "dist/ngx-text-editor/resources/styles",
-                                "output": "resources/styles/"
+                                "input": "dist/ngx-text-editor/resources",
+                                "output": "resources/"
                             }
                         ],
                         "styles": [
