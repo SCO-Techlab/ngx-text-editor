@@ -1,0 +1,20 @@
+{
+  "name": "@sco-techlab/ngx-text-editor",
+  "version": "20.0.1",
+  "description": "Rich text editor library for Angular. Fully customizable, lightweight, and easy to integrate into modern Angular applications.",
+  "author": "Santiago Comeras Oteo <SCO Techlab>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ngx-text-editor/ngx-text-editor.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/forms": "^20.0.0",
+    "rxjs": "^7.8.0",
+    "zone.js": "^0.15.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}
