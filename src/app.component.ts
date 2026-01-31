@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { ShellComponent } from './app/shell';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
-  template: `<p>App works</p>`
+  imports: [ShellComponent],
+  template: `<app-shell></app-shell>`
 })
 export class AppComponent {
 

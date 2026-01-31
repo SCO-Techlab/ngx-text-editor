@@ -43,11 +43,7 @@
                             }
                         ],
                         "styles": [
-                            "src/assets/styles.scss",
-                            "src/assets/demo/demo.scss",
-                            "dist/ngx-text-editor/resources/styles/tailwind.css",
-                            "dist/ngx-text-editor/resources/styles/sakai/layout.scss",
-                            "dist/ngx-text-editor/resources/styles/styles.scss"
+                            "src/assets/styles.scss"
                         ],
                         "scripts": []
                     },

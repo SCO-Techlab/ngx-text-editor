@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
-  { path: '**', redirectTo: '/notfound' }
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
