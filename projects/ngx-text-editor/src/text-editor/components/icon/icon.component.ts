@@ -1,16 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, EventEmitter, input, Output } from '@angular/core';
+import { ICONS } from '../../constants';
 
 @Component({
-  selector: 'app-icon',
+  selector: 'te-icon',
   standalone: true,
   templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss']
+  styleUrls: ['./icon.component.scss'],
+  imports: [
+    NgClass,
+  ]
 })
-export class IconComponent implements OnInit {
+export class IconComponent {
+  icon = input<string>('');
+  canBeClick = input<boolean>(false);
 
-  constructor() { }
+  @Output() click = new EventEmitter<void>();
 
-  ngOnInit() {
+  public ICONS = ICONS;
+
+  public onClick(): void {
+    if (this.canBeClick()) {
+      this.click.emit();
+    }
   }
-
 }
