@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TextEditorComponent } from 'projects/ngx-text-editor/src/components';
+import { TextEditorComponent } from 'projects/ngx-text-editor/src/text-editor';
 
 @Component({
   selector: 'app-home',
