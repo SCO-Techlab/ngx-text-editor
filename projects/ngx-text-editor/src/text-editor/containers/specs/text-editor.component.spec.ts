@@ -7,7 +7,7 @@ describe('projects -> ngx-text-editor -> src -> text-editor -> containers -> Tex
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TextEditorComponent]
+      imports: [TextEditorComponent]
     })
       .compileComponents();
   });

@@ -7,7 +7,7 @@ describe('projects -> ngx-text-editor -> src -> text-editor -> components -> ico
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [IconComponent]
+      imports: [IconComponent]
     })
       .compileComponents();
   });
