@@ -43,13 +43,9 @@
                             }
                         ],
                         "styles": [
-                            "src/assets/styles.scss",
-                            "node_modules/bootstrap/dist/css/bootstrap.min.css"
+                            "src/assets/styles.scss"
                         ],
-                        "scripts": [
-                            "node_modules/@popperjs/core/dist/umd/popper.min.js",
-                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
-                        ]
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
