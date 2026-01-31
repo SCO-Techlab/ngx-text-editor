@@ -1,5 +1,5 @@
-import { NgClass } from '@angular/common';
-import { Component, EventEmitter, input, Output } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { Component, input } from '@angular/core';
 import { ICONS } from '../../constants';
 
 @Component({
@@ -7,21 +7,11 @@ import { ICONS } from '../../constants';
   standalone: true,
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
-  imports: [
-    NgClass,
-  ]
+  imports: [NgStyle]
 })
 export class IconComponent {
   icon = input<string>('');
-  canBeClick = input<boolean>(false);
-
-  @Output() click = new EventEmitter<void>();
-
-  public ICONS = ICONS;
-
-  public onClick(): void {
-    if (this.canBeClick()) {
-      this.click.emit();
-    }
-  }
+  size = input<number>(24);
+  public readonly ICONS = ICONS;
+  public readonly DEFAULT_SIZE = 24;
 }
