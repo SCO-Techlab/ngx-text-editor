@@ -13,7 +13,9 @@ export const ICONS = {
   TEXT_RIGHT: 'bi bi-text-right',
   TEXT_JUSTIFY: 'bi bi-justify',
   LIST_OL: 'bi bi-list-ol',
-  LIST_UL: 'bi bi-list-ul'
+  LIST_UL: 'bi bi-list-ul',
+  CARD_IMAGE: 'bi bi-card-image',
+  PALETTE: 'bi bi-palette',
 }
 
 export const ICON_DEFAULT_SIZE: number = MAGIC_NUMBERS.N_24;
