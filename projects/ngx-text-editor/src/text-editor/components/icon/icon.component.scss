@@ -1,10 +1,12 @@
+@import '../../../styles.scss';
+
 .icon {
   display: inline-block;
 
-  &__light {
+  &__contrast {
     svg {
       path {
-        fill: white !important;
+        fill: $secondary-color !important;
       }
     }
   }

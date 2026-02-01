@@ -1,6 +1,6 @@
 import { NgClass, NgStyle } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { ICONS } from '../../constants';
+import { ICON_DEFAULT_SIZE, ICONS, MAGIC_NUMBERS } from '../../constants';
 
 @Component({
   selector: 'te-icon',
@@ -14,9 +14,14 @@ import { ICONS } from '../../constants';
 })
 export class IconComponent {
   icon = input<string>('');
-  size = input<number>(24);
-  light = input<boolean>(false);
-  
+  size = input<number>(ICON_DEFAULT_SIZE);
+  contrast = input<boolean>(false);
+
   public readonly ICONS = ICONS;
-  public readonly DEFAULT_SIZE = 24;
+
+  public getIconSize(): number {
+    return this.size() > MAGIC_NUMBERS.N_0
+      ? this.size()
+      : ICON_DEFAULT_SIZE
+  }
 }
