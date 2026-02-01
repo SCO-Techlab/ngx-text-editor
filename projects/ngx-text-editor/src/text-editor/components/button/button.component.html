@@ -1,0 +1,18 @@
+<div class="button"
+  [ngClass]="{
+    'button__border': border(),
+    'button__cursor': true,
+    'button__selected': selected,
+    'button__hover': !selected
+  }"
+  (click)="onClick()"
+>
+  @if (text()) {
+    <span class="text">{{text()}}</span>
+  }
+  @if (icon()) {
+    <div class="icon">
+      <te-icon [icon]="icon()" [light]="selected"></te-icon>
+    </div>
+  }
+</div>
