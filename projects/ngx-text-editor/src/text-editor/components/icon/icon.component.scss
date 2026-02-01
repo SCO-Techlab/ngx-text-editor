@@ -1,0 +1,11 @@
+.icon {
+  display: inline-block;
+
+  &__light {
+    svg {
+      path {
+        fill: white !important;
+      }
+    }
+  }
+}

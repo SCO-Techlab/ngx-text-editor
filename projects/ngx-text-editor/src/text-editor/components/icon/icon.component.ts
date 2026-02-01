@@ -1,4 +1,4 @@
-import { NgStyle } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { ICONS } from '../../constants';
 
@@ -7,11 +7,16 @@ import { ICONS } from '../../constants';
   standalone: true,
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
-  imports: [NgStyle]
+  imports: [
+    NgStyle,
+    NgClass
+  ]
 })
 export class IconComponent {
   icon = input<string>('');
   size = input<number>(24);
+  light = input<boolean>(false);
+  
   public readonly ICONS = ICONS;
   public readonly DEFAULT_SIZE = 24;
 }
