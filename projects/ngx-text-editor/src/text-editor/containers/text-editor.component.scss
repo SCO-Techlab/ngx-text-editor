@@ -1,16 +1,49 @@
+@import '../../styles.scss';
+
 .text-editor {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
   &__header {
     width: 100%;
-    border: 1px solid #000;
-    border-radius: 8px;
+    border: 1px solid $border-color;
+    border-bottom: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    padding: 4px;
+    gap: 8px;
+
+    &--actions {
+      display: flex;
+      gap: 2px;
+      border-left: 1px solid $border-color;
+      padding-left: 8px;
+      width: fit-content;
+
+      &:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+    }
   }
 
   &__text-area {
     textarea {
       width: 100%;
+      min-height: 100px;
+      resize: vertical;
+      outline: none;
+      border-color: $border-color;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      color: $primary-color;
+      font-size: 18px;
     }
   }
 }

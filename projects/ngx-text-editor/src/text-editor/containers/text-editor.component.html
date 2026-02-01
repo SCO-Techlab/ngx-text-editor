@@ -1,11 +1,136 @@
 <div class="text-editor">
   <div class="text-editor__header">
+    <div class="text-editor__header--actions">
+      <te-button 
+        [icon]="ICONS.ARROW_COUNTERCLOCKWISE" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="false" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.ARROW_CLOCKWISE" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="false" 
+        [disabled]="false"
+      ></te-button>
+    </div>
 
+    <div class="text-editor__header--actions">
+      <te-button 
+        [icon]="ICONS.TYPE_BOLD" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.TYPE_UNDERLINE" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.TYPE_STRIKETHROUGH"
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.TYPE_ITALIC" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+    </div>
+
+    <div class="text-editor__header--actions">
+      <te-button 
+        [icon]="ICONS.TEXT_LEFT" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.TEXT_CENTER" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.TEXT_RIGHT" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.TEXT_JUSTIFY" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+    </div>
+
+    <div class="text-editor__header--actions">
+      <te-button 
+        [icon]="ICONS.LIST_OL" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.LIST_UL" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="true" 
+        [disabled]="false"
+      ></te-button>
+    </div>
+
+    <div class="text-editor__header--actions">
+      <te-button 
+        [icon]="ICONS.CARD_IMAGE" 
+        [text]="''" 
+        [border]="false" 
+        [buttonSelectedEnabled]="false" 
+        [disabled]="false"
+      ></te-button>
+      <te-button 
+        [icon]="ICONS.PALETTE" 
+        [text]="'#000'" 
+        [border]="false" 
+        [buttonSelectedEnabled]="false" 
+        [disabled]="false"
+      ></te-button>
+    </div>
+
+    <div class="text-editor__header--actions">
+      <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
   </div>
   <div class="text-editor__text-area">
-    <textarea></textarea>
+    <form [formGroup]="textAreaForm">
+      <textarea formControlName="textArea"></textarea>
+    </form>
   </div>
 </div>
-
-<te-icon [icon]="ICONS.ARROW_COUNTERCLOCKWISE"></te-icon>
-<te-icon [icon]="ICONS.ARROW_CLOCKWISE" [canBeClick]="true" (click)="undefined"></te-icon>
