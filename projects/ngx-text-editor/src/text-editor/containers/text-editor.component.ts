@@ -1,7 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ButtonComponent } from '../components';
-import { ICONS } from '../constants';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ICONS, MAGIC_NUMBERS } from '../constants';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ngx-text-editor',
@@ -9,41 +9,32 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   templateUrl: './text-editor.component.html',
   styleUrls: ['./text-editor.component.scss'],
   imports: [
-    ButtonComponent,
     FormsModule,
-    ReactiveFormsModule
+    ButtonComponent,
   ]
 })
-export class TextEditorComponent implements OnInit {
+export class TextEditorComponent {
 
   @Output() change = new EventEmitter<string>();
 
   public ICONS = ICONS;
-  public textAreaForm: FormGroup;
+  public text: string = '';
 
-  constructor() { }
-
-  ngOnInit() {
-    this.initTextAreaForm();
-    this.subscribeTextAreaChanges();
-  }
-
-  private initTextAreaForm(): void {
-    this.textAreaForm = new FormGroup({
-      textArea: new FormControl('')
-    });
-  }
-
-  private subscribeTextAreaChanges(): void {
-    this.textAreaForm.valueChanges.subscribe(formControl => {
-      const value: string = formControl.textArea;
-      const formatedValue: string = this.formatTextAreaValue(value);
-      console.log(formatedValue);
-      this.change.emit(formatedValue);
-    });
+  public onTextAreaChange(value: string): void {
+    this.change.emit(this.formatTextAreaValue(value));
   }
 
   private formatTextAreaValue(text: string): string {
-    return text;
+    const lines: string[] = text.split('\n');
+    if (!lines || lines.length === MAGIC_NUMBERS.N_0) {
+      return text;
+    }
+
+    let formattedText: string = '';
+    lines.forEach((line: string) => {
+      formattedText += `${line}<br>`;
+    });
+
+    return formattedText;
   }
 }

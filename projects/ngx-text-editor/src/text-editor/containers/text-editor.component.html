@@ -19,6 +19,16 @@
 
     <div class="text-editor__header--actions">
       <te-button 
+        [icon]="ICONS.PALETTE" 
+        [text]="'#000'" 
+        [border]="false" 
+        [buttonSelectedEnabled]="false" 
+        [disabled]="false"
+      ></te-button>
+    </div>
+
+    <div class="text-editor__header--actions">
+      <te-button 
         [icon]="ICONS.TYPE_BOLD" 
         [text]="''" 
         [border]="false" 
@@ -104,33 +114,13 @@
         [buttonSelectedEnabled]="false" 
         [disabled]="false"
       ></te-button>
-      <te-button 
-        [icon]="ICONS.PALETTE" 
-        [text]="'#000'" 
-        [border]="false" 
-        [buttonSelectedEnabled]="false" 
-        [disabled]="false"
-      ></te-button>
-    </div>
-
-    <div class="text-editor__header--actions">
-      <select>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
     </div>
   </div>
   <div class="text-editor__text-area">
-    <form [formGroup]="textAreaForm">
-      <textarea formControlName="textArea"></textarea>
-    </form>
+    <textarea 
+      [(ngModel)]="text" 
+      (ngModelChange)="onTextAreaChange($event)"
+      (change)="$event.stopPropagation()"
+    ></textarea>
   </div>
 </div>
