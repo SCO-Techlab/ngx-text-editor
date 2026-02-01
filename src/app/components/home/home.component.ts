@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TextEditorComponent } from 'projects/ngx-text-editor/src/text-editor';
 
 @Component({
@@ -8,11 +8,13 @@ import { TextEditorComponent } from 'projects/ngx-text-editor/src/text-editor';
   styleUrls: ['./home.component.scss'],
   imports: [TextEditorComponent]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  public text: string = '';
 
-  ngOnInit() {
+  public onTextEditorChange(value: string): void {
+    console.log(value);
+    this.text = value;
   }
 
 }

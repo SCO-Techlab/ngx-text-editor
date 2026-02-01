@@ -1,3 +1,20 @@
 .home {
-    padding: 2rem;
+  padding: 2rem;
+  background-color: rgb(211, 211, 211, 0.3);
+  border-radius: 8px;
+}
+
+.result {
+  padding: 2rem;
+  background-color: rgb(211, 211, 211, 0.3);
+  border-radius: 8px;
+  margin-top: 24px;
+
+  &__result-box {
+    min-height: 200px;
+    height: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 8px;
+  }
 }
