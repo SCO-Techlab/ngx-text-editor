@@ -1,9 +1,10 @@
 <div class="button"
   [ngClass]="{
     'button__border': border(),
-    'button__cursor': true,
+    'button__cursor': !disabled(),
     'button__selected': selected,
-    'button__hover': !selected
+    'button__hover': !selected && !disabled(),
+    'button__disabled': disabled()
   }"
   (click)="onClick()"
 >
@@ -12,7 +13,7 @@
   }
   @if (icon()) {
     <div class="icon">
-      <te-icon [icon]="icon()" [light]="selected"></te-icon>
+      <te-icon [icon]="icon()" [contrast]="selected"></te-icon>
     </div>
   }
 </div>

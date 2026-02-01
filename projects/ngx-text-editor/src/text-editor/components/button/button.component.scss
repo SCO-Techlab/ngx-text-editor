@@ -1,12 +1,16 @@
+@import '../../../styles.scss';
+
 .button {
   width: fit-content;
-  padding: 6px;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 4px;
+  border-radius: 8px;
 
   // Evita que el texto dentro del botón se pueda seleccionar
   user-select: none;
@@ -15,7 +19,7 @@
   -ms-user-select: none; /* IE10+ */
 
   &__border {
-    border: 1px solid black;
+    border: 1px solid $primary-color;
   }
 
   &__cursor {
@@ -23,14 +27,20 @@
   }
 
   &__selected {
-    background-color: darkslategray;
-    color: #FFF;
+    background-color: $selected-color;
+    border-color: $selected-color;
+    color: $secondary-color;
   }
 
   &__hover {
     &:hover {
-      background-color: lightgray;
+      background-color: $background-color;
+      border-color: $background-color;
     }
+  }
+
+  &__disabled {
+    opacity: .65;
   }
 
   .text {
