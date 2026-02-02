@@ -1,0 +1,19 @@
+<div class="actions-group"
+  [ngClass]="{
+    'actions-group__border': border(),
+    'actions-group__border--right': border() && isRightPosition()
+  }"
+>
+  @for (action of actions(); track action; let i = $index) {
+    <te-button 
+      #actionButton
+      [id]="action.id"
+      [icon]="action.icon" 
+      [text]="action.text" 
+      [border]="action.border" 
+      [buttonSelectedEnabled]="action.buttonSelectedEnabled" 
+      [disabled]="action.disabled"
+      (buttonClick)="onClickAction(action, actionButton)"
+    ></te-button>
+  }
+</div>

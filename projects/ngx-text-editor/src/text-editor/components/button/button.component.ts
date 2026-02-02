@@ -14,6 +14,7 @@ import { NgClass } from '@angular/common';
 })
 export class ButtonComponent {
 
+  id = input<string>('');
   text = input<string>('');
   icon = input<string>('');
   border = input<boolean>(false);
@@ -34,5 +35,13 @@ export class ButtonComponent {
     }
 
     this.buttonClick.emit();
+  }
+
+  public select(): void {
+    this.selected = true;
+  }
+
+  public unSelect(): void {
+    this.selected = false;
   }
 }

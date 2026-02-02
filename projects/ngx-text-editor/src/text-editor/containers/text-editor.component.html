@@ -1,122 +1,35 @@
 <div class="text-editor">
   <div class="text-editor__header">
-    <div class="text-editor__header--actions">
-      <te-button 
-        [icon]="ICONS.ARROW_COUNTERCLOCKWISE" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="false" 
-        [disabled]="false"
-        (click)="undo()"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.ARROW_CLOCKWISE" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="false" 
-        [disabled]="false"
-        (click)="redo()"
-      ></te-button>
-    </div>
+    <te-actions-group 
+      [actions]="historyActions"
+      [border]="false"
+      (actionClick)="onClickAction($event)"
+    ></te-actions-group>
 
-    <div class="text-editor__header--actions">
-      <te-button 
-        [icon]="ICONS.PALETTE" 
-        [text]="'#000'" 
-        [border]="false" 
-        [buttonSelectedEnabled]="false" 
-        [disabled]="false"
-      ></te-button>
-    </div>
+    <te-actions-group 
+      [actions]="colorActions" 
+      (actionClick)="onClickAction($event)"
+    ></te-actions-group>
+    
+    <te-actions-group 
+      [actions]="textStyleActions" 
+      (actionClick)="onClickAction($event)"
+    ></te-actions-group>
 
-    <div class="text-editor__header--actions">
-      <te-button 
-        [icon]="ICONS.TYPE_BOLD" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.TYPE_UNDERLINE" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.TYPE_STRIKETHROUGH"
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.TYPE_ITALIC" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-    </div>
+    <te-actions-group 
+      [actions]="textAlignActions" 
+      (actionClick)="onClickAction($event)"
+    ></te-actions-group>
 
-    <div class="text-editor__header--actions">
-      <te-button 
-        [icon]="ICONS.TEXT_LEFT" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.TEXT_CENTER" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.TEXT_RIGHT" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.TEXT_JUSTIFY" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-    </div>
+    <te-actions-group 
+      [actions]="textListActions" 
+      (actionClick)="onClickAction($event)"
+    ></te-actions-group>
 
-    <div class="text-editor__header--actions">
-      <te-button 
-        [icon]="ICONS.LIST_OL" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-      <te-button 
-        [icon]="ICONS.LIST_UL" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="true" 
-        [disabled]="false"
-      ></te-button>
-    </div>
-
-    <div class="text-editor__header--actions">
-      <te-button 
-        [icon]="ICONS.CARD_IMAGE" 
-        [text]="''" 
-        [border]="false" 
-        [buttonSelectedEnabled]="false" 
-        [disabled]="false"
-      ></te-button>
-    </div>
+    <te-actions-group 
+      [actions]="imageActions" 
+      (actionClick)="onClickAction($event)"
+    ></te-actions-group>
   </div>
   <div class="text-editor__text-area">
     <textarea 

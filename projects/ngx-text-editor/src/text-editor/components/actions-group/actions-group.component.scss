@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+.actions-group {
+  display: flex;
+  gap: 2px;
+  width: fit-content;
+
+  &__border {
+    border-left: 1px solid $border-color;
+    padding-left: 8px;
+
+    &--right {
+      border-right: 1px solid $border-color;
+      padding-right: 8px;
+    }
+  }
+}

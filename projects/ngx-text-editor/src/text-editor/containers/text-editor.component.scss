@@ -19,19 +19,6 @@
     padding: 4px;
     gap: 8px;
     background-color: $secondary-color;
-
-    &--actions {
-      display: flex;
-      gap: 2px;
-      border-left: 1px solid $border-color;
-      padding-left: 8px;
-      width: fit-content;
-
-      &:first-child {
-        border-left: none;
-        padding-left: 0;
-      }
-    }
   }
 
   &__text-area {
