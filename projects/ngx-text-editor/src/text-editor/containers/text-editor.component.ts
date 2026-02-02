@@ -50,16 +50,9 @@ export class TextEditorComponent implements OnInit {
   }
 
   private formatTextAreaValue(text: string): string {
-    const lines: string[] = text.split('\n');
-    if (!lines || lines.length === MAGIC_NUMBERS.N_0) {
-      return text;
-    }
-
-    let formattedText: string = '';
-    lines.forEach((line: string) => {
-      formattedText += `${line}<br>`;
-    });
-
-    return formattedText;
+    return text
+      .split('\n\n') // Double enter = new paragraph
+      .map(p => `<p>${p.replace(/\n/g, '<br>') || '<br>'}</p>`)
+      .join('');
   }
 }
