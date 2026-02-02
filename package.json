@@ -13,7 +13,8 @@
     "watch-library": "ng build ngx-text-editor --watch",
     "publish-library": "npm run build-library && npm publish ./dist/ngx-text-editor",
     "format": "prettier --write \"**/*.{js,mjs,ts,mts,d.ts,html}\" --cache",
-    "test": "ng test"
+    "test": "ng test --code-coverage",
+    "test-library": "ng test ngx-text-editor --watch=false --browsers=ChromeHeadless --code-coverage"
   },
   "dependencies": {
     "@angular/animations": "^20.0.0",
