@@ -121,7 +121,7 @@
   <div class="text-editor__text-area">
     <textarea 
       [(ngModel)]="text" 
-      (ngModelChange)="onTextAreaChange($event)"
+      (ngModelChange)="editorChange($event)"
       (change)="$event.stopPropagation()"
     ></textarea>
   </div>

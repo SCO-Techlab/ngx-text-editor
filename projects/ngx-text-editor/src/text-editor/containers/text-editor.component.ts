@@ -43,7 +43,7 @@ export class TextEditorComponent implements OnInit {
     }
   }
 
-  public onTextAreaChange(value: string): void {
+  public editorChange(value: string): void {
     console.log(value);
     this.historyService.saveHistoryState(value);
     this.change.emit(this.formatTextAreaValue(value));
