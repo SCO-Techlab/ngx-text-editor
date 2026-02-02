@@ -20,7 +20,7 @@ export class ButtonComponent {
   buttonSelectedEnabled = input<boolean>(false);
   disabled = input<boolean>(false);
 
-  @Output() click = new EventEmitter<void>();
+  @Output() buttonClick = new EventEmitter<void>();
 
   public selected: boolean = false;
 
@@ -33,6 +33,6 @@ export class ButtonComponent {
       this.selected = !this.selected;
     }
 
-    this.click.emit();
+    this.buttonClick.emit();
   }
 }
