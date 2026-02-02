@@ -7,6 +7,7 @@
         [border]="false" 
         [buttonSelectedEnabled]="false" 
         [disabled]="false"
+        (click)="undo()"
       ></te-button>
       <te-button 
         [icon]="ICONS.ARROW_CLOCKWISE" 
@@ -14,6 +15,7 @@
         [border]="false" 
         [buttonSelectedEnabled]="false" 
         [disabled]="false"
+        (click)="redo()"
       ></te-button>
     </div>
 
